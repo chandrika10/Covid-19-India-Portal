@@ -1,0 +1,60 @@
+
+POST http://localhost:3000/login/
+Content-Type: application/json
+
+{
+    "username": "christopher_phillips",
+    "password": "christy@123"
+}
+###
+
+GET http://localhost:3000/states/
+
+Authorization: Bearer "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImNocm1zdG9waGVyX3BoaWxsaXBzIiwiaWF0IjoxNjc5OTk2MjA0fQ.D72Xa0XhakshUEXOJmHDUy691spZD7gkLXE5evzA97A" 
+
+###
+GET http://localhost:3000/states/5/
+Authorization: Bearer "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImNocm1zdG9waGVyX3BoaWxsaXBzIiwiaWF0IjoxNjc5OTk2MjA0fQ.D72Xa0XhakshUEXOJmHDUy691spZD7gkLXE5evzA97A" 
+
+###
+POST  http://localhost:3000/districts/
+Content-Type: application/json
+Authorization: Bearer "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImNocm1zdG9waGVyX3BoaWxsaXBzIiwiaWF0IjoxNjc5OTk2MjA0fQ.D72Xa0XhakshUEXOJmHDUy691spZD7gkLXE5evzA97A" 
+
+{
+  "districtName": "Bagalkot",
+  "stateId": 3,
+  "cases": 2323,
+  "cured": 2000,
+  "active": 315,
+  "deaths": 8
+}
+
+###
+
+GET http://localhost:3000/districts/20/
+Authorization: Bearer "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImNocm1zdG9waGVyX3BoaWxsaXBzIiwiaWF0IjoxNjc5OTk2MjA0fQ.D72Xa0XhakshUEXOJmHDUy691spZD7gkLXE5evzA97A" 
+
+###
+
+DELETE http://localhost:3000/districts/23/
+Authorization: Bearer "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImNocm1zdG9waGVyX3BoaWxsaXBzIiwiaWF0IjoxNjc5OTk2MjA0fQ.D72Xa0XhakshUEXOJmHDUy691spZD7gkLXE5evzA97A" 
+
+###
+
+PUT http://localhost:3000/districts/23/
+Content-Type: application/json
+Authorization: Beare "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImNocm1zdG9waGVyX3BoaWxsaXBzIiwiaWF0IjoxNjc5OTk2MjA0fQ.D72Xa0XhakshUEXOJmHDUy691spZD7gkLXE5evzA97A" 
+
+{
+  "districtName": "Nadia",
+  "stateId": 3,
+  "cases": 9628,
+  "cured": 6524,
+  "active": 3000,
+  "deaths": 104
+}
+###
+
+GET http://localhost:3000/states/8/stats/
+Authorization: Bearer "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImNocm1zdG9waGVyX3BoaWxsaXBzIiwiaWF0IjoxNjc5OTk2MjA0fQ.D72Xa0XhakshUEXOJmHDUy691spZD7gkLXE5evzA97A" 
